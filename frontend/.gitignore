@@ -1,4 +1,6 @@
+# ----------------------------------------
 # Logs
+# ----------------------------------------
 logs
 *.log
 npm-debug.log*
@@ -7,18 +9,48 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# ----------------------------------------
+# Dependencies
+# ----------------------------------------
+node_modules/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# ----------------------------------------
+# Build output
+# ----------------------------------------
+dist/
+dist-ssr/
+.vite/
+
+# ----------------------------------------
+# Local environment files
+# ----------------------------------------
+*.local
+.env
+.env.local
+.env.*.local
+
+# ----------------------------------------
+# Editor / System folders
+# ----------------------------------------
 .DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# ----------------------------------------
+# VSCode configuration
+# NOTE:
+# No ignores .vscode/settings.json because we *WANT*
+# it in the repo for Tailwind IntelliSense config.
+# ----------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# ----------------------------------------
+# OS artifacts
+# ----------------------------------------
+Thumbs.db
